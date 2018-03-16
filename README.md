@@ -1,2 +1,5 @@
 # markup-practice
-와하하하하 알아서 잘 합니다 핥핥.
+ 
+션! 마크업 연습해 일주일에 한개식!
+
+mark-up practice once a week

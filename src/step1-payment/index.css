@@ -52,8 +52,9 @@ border-spacing: 0;
 .wrap_payment{border:1px solid #efefef;background-color:#fff}
 .wrap_payment .txt_tit{padding:14px;border-bottom:1px solid #efefef;font-weight:600;font-size:24px}
 .wrap_payment .list_item{margin:0 14px;padding:14px 0;border-bottom:1px solid #efefef}
-.wrap_payment .list_item li{margin-top:14px;overflow:hidden}
+.wrap_payment .list_item li{overflow:hidden;margin-top:14px}
 .wrap_payment .list_item li:first-child{margin-top:0}
+/*.wrap_payment .list_item li:after{display:block;clear:both;content:""}*/
 .wrap_payment .item_tit{font-size:14px;color:gray}
 .wrap_payment .item_cont{float:right;font-weight:600;font-size:14px;line-height:18px;letter-spacing:-0.2px;text-align:right}
 .wrap_payment .txt_cost{color:red}
