@@ -1,6 +1,6 @@
 /* last modified shawn 3.15.18` */
 .payment_details{padding:14px;}
-.payment_details .inner_details{background-color:#fff}
+.payment_details .inner_details{margin-bottom:14px;background-color:#fff}
 .payment_details .txt_tit{padding:14px;border-bottom:1px solid #efefef;font-weight:600;font-size:24px}
 .payment_details .list_item{margin:0 14px;padding:14px 0;border-bottom:1px solid #efefef}
 .payment_details .list_item li{overflow:hidden;margin-top:14px}

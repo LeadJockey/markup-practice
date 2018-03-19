@@ -1,8 +1,10 @@
 /* last modified shawn 3.16.18` */
-.payment_tit{padding:14px;text-align:center;background-color:#fff}
+/* last modified shawn 3.19.18` */
+
 .payment_info{background-color:#fff}
 .payment_info .field_info{background-color:#efefef}
-.payment_info .legend_info h2{padding:8px 8px 8px 14px;font-size:14px;color:gray}
+.payment_info .legend_info{padding:8px;}
+.payment_info .txt_tit{font-size:12px;color:gray;text-indent:8px}
 .payment_info .list_info{padding:14px;background-color:#fff}
 .payment_info .list_info li{position:relative;padding-left:60px;margin-top:8px}
 .payment_info .list_info li:first-child{margin-top:0}
@@ -10,3 +12,12 @@
 .payment_info .mark_essential:after{color:red;content:"*"}
 .payment_info .item_input{height:28px;width:100%;border:1px solid #efefef;text-indent:14px;font-size:12px;}
 .payment_info .txt_desc{margin-top:8px;font-size:12px;line-height:16px;color:gray}
+.payment_info .box_memo{display:block;position:relative;overflow:hidden;padding-right:70px;border:1px solid #efefef}
+.payment_info .info_memo{float:left;width:100%;padding:9px;font-size:12px;letter-spacing:1.2px;line-height:14px;resize:none}
+.payment_info .info_memo::-webkit-input-placeholder{color:gainsboro}
+.payment_info .info_memo:-moz-placeholder{color:gainsboro} /* Firefox 18- */
+.payment_info .info_memo::-moz-placeholder{color:gainsboro} /* Firefox 19+ */
+.payment_info .info_memo:-ms-input-placeholder{color:gainsboro}
+
+.payment_info .link_upload{position:absolute;right:0;top:0}
+.payment_info .img_upload{display:block}

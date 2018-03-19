@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>payment</title>
-    <!--<link rel="stylesheet" href="reset.css">-->
-    <!--<link rel="stylesheet" href="index.css">-->
-    <!--<link rel="stylesheet" href="index2.css">-->
-    <!--<link rel="stylesheet" href="index3.css">-->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index2.css">
     <meta name="viewport"
           content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, target-densityDpi=medium-dpi, viewport-fit=cover">
 </head>
 <body>
 <div class="wrapper">
-    <!--최상단 탑 부분 index2.html-->
     <div class="main_top">
         <h1 class="main_tit">결제하기</h1>
         <a href="javascript:;" class="link_back"><span class="screen_out">뒤로가기</span></a>
         <a href="javascript:;" class="link_close screen_out"><span class="screen_out">닫기</span></a>
     </div>
-    <!-- 예약정보 및 동의 index2.html-->
     <form class="payment_info" method="post" action="#">
         <fieldset class="field_info">
             <legend class="legend_info">
@@ -40,7 +37,7 @@
                     <label class="item_info" for="info_memo">메모</label>
                     <span class="box_memo">
                         <textarea id="info_memo" class="info_memo" placeholder="방문 전 디자이너에게 헤어상태를 전달해보세요!"></textarea>
-                        <a href="javascript:;" type="submit" class="link_upload">
+                        <a href="javascript:;" class="link_upload">
                             <img src="https://dummyimage.com/50x50/efefef/fff" class="img_upload" alt="사진">
                         </a>
                     </span>
@@ -79,50 +76,13 @@
                     <li><span class="txt_noti">시술 예약시간이 지난 경우 또는 미방문인 경우<br>70% 취소/환불됩니다.</span></li>
                     <li><span class="txt_noti"><em class="txt_emph">시술 예약시간 전까지 ‘날짜 및 시간’변경 가능</em>합니다.</span></li>
                 </ul>
-                <strong class="screen_out">면책문구</strong>
+                <strong class="screen_out">면책문</strong>
                 <p class="txt_desc">
                     주식회사 카카오는 통신판매중 개발자로서 카카오헤어샆의 거래당사자가 아니며, 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.
                 </p>
             </div>
         </div>
-        <!-- 베너 영역 index3.html-->
-        <div class="inner_bnr">베너 영역</div>
     </div>
-    <form class="payment_method" method="post" action="#">
-        <fieldset class="field_method">
-            <legend class="legend_method">
-                <h2 class="txt_tit">결제 수단 선택</h2>
-            </legend>
-            <ul>
-                <li>
-                    <input type="radio" id="kakaoPay">
-                    <label for="kakaoPay">카드</label>
-                    <span>pay</span>
-                    <span>10% 최대 2천원 할</span>
-                </li>
-                <li>
-                    <input type="radio" id="creditCard">
-                    <label for="creditCard">일반 신용카드</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="ck1" id="ck1" value="true">
-                    <label for="ck1">상기 결제 내역을 확인, 결제 진행에 동의</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="ck2" id="ck2"value="true" checked>
-                    <label for="ck2">취소/변경/환불 수수료 및 기한을 확인 하였으며, 동의</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="ck3" id="ck3"value="true" checked>
-                    <label for="ck3">개인정보 제 3차 제공의 동의</label>
-                    <p>
-                        예약서비스 및 커뮤니케이션을 위해 개인정보를 제공받는 대상 : 메종드라피네, 하시스(주) (예약시스템사업자) <a href="javascript:;">자세히보기</a>
-                    </p>
-                </li>
-            </ul>
-        </fieldset>
-        <button type="submit">결제하기</button>
-    </form>
 </div>
 </body>
 </html>
