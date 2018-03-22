@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ellipsis</title>
+</head>
+<body>
+<h1> 말줄임 (1줄 / 2줄) 이해하기</h1>
+<style>
+    .ellipsis-1{
+        overflow:hidden;
+        word-wrap:normal;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+    .ellipsis-2{
+        overflow:hidden;
+        display: -webkit-box;
+        word-wrap:break-word;
+        /*white-space:nowrap;*/
+        text-overflow:ellipsis;
+        -webkit-line-clamp:2; /*  -- 라인수 지정*/
+        -webkit-box-orient:vertical;
+
+        /*웹킷 엔진을 사용하지 않는 브라우져를 위해 사용방법*/
+        line-height:1.2em;
+        height:2.4em;
+    }
+</style>
+
+<h2> 말줄임 1줄 처리</h2>
+<div style="width:200px;border:1px solid red">
+    <p class="ellipsis-1">
+        아아아아아아아아아아아아아아아아아아아아아아아나나나나
+    </p>
+</div>
+
+<h2> 말줄임 2줄 처리</h2>
+<div style="width:200px;border:1px solid red">
+    <p class="ellipsis-2" >
+        hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world
+        아아아아아아아아아아아아아아아아아아아아아아아나나나나아아아아아아아아아아아아아아아아아아아아아아아나나나나
+    </p>
+</div>
+
+</body>
+</html>

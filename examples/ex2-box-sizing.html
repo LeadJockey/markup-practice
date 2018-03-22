@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box-sizing</title>
+</head>
+<body>
+<h1> box model 이해하기</h1>
+
+<h2 style="color:red"> border 가 엘리먼트의 총 넓이 / 높이를 증가 시킨다 </h2>
+<div style="margin-bottom:10px;overflow:hidden;width:200px;padding:5px;background-color:aqua">
+    <div style="float:left;width:100px;height:100px;background-color:yellow;border:1px solid red"></div>
+    <div style="float:right;width:100px;height:100px;background-color:green"></div>
+</div>
+
+<h2> box-sizing:padding-box  ::  padding + content</h2>
+<div style="margin-bottom:10px;overflow:hidden;width:200px;padding:5px;background-color:aqua">
+    <div style="float:left;width:100px;height:100px;background-color:yellow;border:1px solid red;box-sizing:padding-box"></div>
+    <div style="float:right;width:100px;height:100px;background-color:green"></div>
+</div>
+
+<h2> box-sizing:border-box  :: border + padding + content</h2>
+<div style="margin-bottom:10px;overflow:hidden;width:200px;padding:5px;background-color:aqua">
+    <div style="float:left;width:100px;height:100px;background-color:yellow;border:1px solid red;box-sizing:border-box"></div>
+    <div style="float:right;width:100px;height:100px;background-color:green"></div>
+</div>
+
+</body>
+</html>

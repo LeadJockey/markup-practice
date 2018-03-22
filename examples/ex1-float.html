@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float</title>
+</head>
+<body>
+<h1> float 속성 이해하기</h1>
+
+<h2 style="color:red">float 해제 하지 않으면 감싸고 있는 element 가 높이를 인식하지 못함</h2>
+<div style="margin-bottom:10px;width:240px;padding:5px;background-color:aqua">
+    <div style="float:left;width:100px;height:100px;background-color:yellow"></div>
+    <div style="float:right;width:100px;height:100px;background-color:green"></div>
+</div>
+<div style="width:100px;height:100px;background-color:red"></div>
+<div style="clear:both"></div>
+
+<h2>float 해제 방법 1 overflow:hidden</h2>
+<div style="margin-bottom:10px;width:240px;overflow:hidden;padding:5px;background-color:aqua">
+    <div style="float:left;width:100px;height:100px;background-color:yellow"></div>
+    <div style="float:right;width:100px;height:100px;background-color:green"></div>
+</div>
+
+<h2>float 해제 방법 2 : clear both</h2>
+<div style="margin-bottom:10px;width:240px;padding:5px;background-color:aqua">
+    <div style="float:left;width:100px;height:100px;background-color:yellow"></div>
+    <div style="float:right;width:100px;height:100px;background-color:green"></div>
+    <div style="clear:both"></div>
+</div>
+
+<h2>float 해제 방법 3 : 가상선택자 사용 :after / :before</h2>
+<style>
+    .target:after{
+        /*display:block;*/ /*block으로 주는 경우도있는데 검색해보면 table을 더 많이 사용한다.*/
+        display:table;
+        clear:both;
+        content:''}
+</style>
+<div class="target" style="margin-bottom:10px;width:240px;padding:5px;background-color:aqua">
+    <div style="float:left;width:100px;height:100px;background-color:yellow"></div>
+    <div style="float:right;width:100px;height:100px;background-color:green"></div>
+</div>
+
+<h2> float 좌측 고정 / 우측 overflow 채우기 </h2>
+<div style="margin-bottom:10px;overflow:hidden;padding:5px;background-color:aqua">
+    <div style="float:left;width:100px;height:100px;background-color:yellow"></div>
+    <div style="overflow:hidden;height:100px;background-color:green"></div>
+</div>
+
+</body>
+</html>
