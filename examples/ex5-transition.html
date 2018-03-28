@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+
+        #wrapper{
+            position:relative;
+            height:500px;
+            width:500px;
+            margin:30px auto;
+            border:1px solid skyblue;
+        }
+        #btn-on{
+            width:100px;
+            background-color:#efefef;
+        }
+        #btn-off{
+            width:100px;
+            background-color:#efefef;
+        }
+        .target{
+            position:absolute;
+            top:150px;
+            left:150px;
+            width:200px;
+            height:200px;
+            background:red;
+            animation:example 4s infinite alternate-reverse;
+            transition:all 1s;
+            -webkit-transition:all 1s; /* Safari 3.1 to 6.0 */
+        }
+        #wrapper.on .target{
+            background-color:yellow;
+        }
+        .target:hover{
+            top:100px;
+            left:100px;
+            width:300px;
+            height:300px;
+            background-color:blue;
+            opacity:0.5;
+            transform:rotate(360deg);
+            -webkit-transform:rotate(360deg);
+        }
+        .btn{
+            width:500px;
+            margin:30px auto;
+            border:1px solid skyblue;
+        }
+
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes example {
+            0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color:yellow; left:200px; top:0px;}
+            50%  {background-color:blue; left:200px; top:200px;}
+            75%  {background-color:green; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+        }
+        /* Standard syntax */
+        @keyframes example {
+            0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color:yellow; left:200px; top:0px;}
+            50%  {background-color:blue; left:200px; top:200px;}
+            75%  {background-color:green; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div class="target"></div>
+</div>
+<div class="btn">
+    <button id="btn-on">on</button>
+    <button id="btn-off">off</button>
+</div>
+<script type="text/javascript">
+	document.getElementById('btn-on').addEventListener('click', function () {
+		document.getElementById('wrapper').classList.add('on');
+	});
+	document.getElementById('btn-off').addEventListener('click', function () {
+		document.getElementById('wrapper').classList.remove('on');
+	});
+</script>
+</body>
+</html>
