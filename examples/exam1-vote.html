@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>MobileLayout</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /* pc 레티나 대응 */
+        @media only screen and (-webkit-min-device-pixel-ratio:1.5), not all, only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi){
+
+        }
+    </style>
+    <style>
+        /* 대선 페이지 테스트 */
+        /* common */
+        .screen_out{display:block;overflow:hidden;position:absolute;width:1px;height:1px;font-size:0;line-height:0;text-indent:-2500px}
+        /* top */
+        .top{
+            position:relative;
+            padding:20px 0;
+            background-color:#002042;
+            text-align:center;
+        }
+        .top-logo{
+            display:inline-block;
+            padding:10px 20px;
+            font-weight:bold;
+            border:1px solid #efefef;
+            line-height:1.2;
+        }
+        .top-logo .txt-slogun{
+            display:block;
+            color:yellow;
+            font-size:18px;
+        }
+        .top-logo .txt-ordinal{
+            display:block;
+            color:#fff;
+            font-size:32px;
+        }
+        .top-logo .txt-tit{
+            display:block;
+            color:#fff;
+            font-size:20px;
+        }
+        .top-info{
+            position:absolute;
+            right:14px;
+            top:20px;
+            text-align:right;
+            line-height:1.2;
+        }
+        .top-info .txt-date{
+            display:block;
+            color:#efefef;
+            font-weight:bold;
+        }
+        .top-info .txt-dday{
+            display:block;
+            color:yellow;
+            font-size:20px;
+            font-weight:bold;
+        }
+        /* tab */
+        .list-tab{
+            overflow:hidden;
+        }
+        .list-tab li{
+            float:left;
+            width:33.3333%;
+            height:50px;
+            color:#000;
+        }
+        .link-tab{
+            display:block;
+            height:100%;
+            background-color:#efefef;
+            text-align:center;
+        }
+        .list-tab .txt-inner{
+            display:inline-block;
+            padding-top:15px;
+            color:#444;
+            font-weight:500;
+        }
+        .list-tab .ico-vote{
+            display:inline-block;
+            width:20px;
+            height:20px;
+            margin-right:5px;
+            background-color:orange;
+            font-size:10px;
+            color:#fff;
+            line-height:20px;
+            vertical-align:top;
+            border:1px solid #fff;
+            border-radius:50%;
+        }
+        .list-tab .on .link-tab{
+            background-color:#fff;
+        }
+
+        /* sub tab */
+        /*.list-sub{*/
+            /*padding:0 14px;*/
+            /*border-bottom:1px solid #efefef;*/
+        /*}*/
+        /*.list-sub li{*/
+            /*width:50%;*/
+        /*}*/
+        /*.list-sub .link-tab{*/
+            /*background-color:#fff;*/
+        /*}*/
+        /*.list-sub .on .link-tab{*/
+            /*margin-top:-1px;*/
+            /*border-bottom:2px solid #444;*/
+        /*}*/
+
+        /* sub tab with :before */
+        .list-sub{
+            position:relative;
+            padding:0 14px;
+        }
+        .list-sub:before{
+            position:absolute;
+            left:0;
+            bottom:0;
+            right:0;
+            height:1px;
+            background-color:#efefef;
+            content:'';
+        }
+        .list-sub li{
+            width:50%;
+
+        }
+        .list-sub .link-tab{
+            background-color:#fff;
+        }
+        .list-sub .on .link-tab{
+            position:relative;
+            height:49px;
+            border-bottom:1px solid #444;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="top">
+        <div class="top-logo">
+            <span class="txt-slogun">변화의 선택</span>
+            <span class="txt-ordinal">제 19대</span>
+            <span class="txt-tit">대통령 선거</span>
+        </div>
+        <div class="top-info">
+            <span class="txt-date">5.9.화요일</span>
+            <span class="txt-dday">D-48</span>
+        </div>
+    </div>
+    <ul class="list-tab">
+        <li>
+            <a href="javascript:;" class="link-tab">
+                <span class="txt-inner">개요</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="link-tab">
+                <span class="txt-inner">후보자</span>
+            </a>
+        </li>
+        <li class="on">
+            <a href="javascript:;" class="link-tab">
+                <span class="txt-inner"><span class="ico-vote">투표</span>핫이슈</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="list-tab list-sub">
+        <li>
+            <a href="javascript:;" class="link-tab">
+                <span class="txt-inner">후보는 지금</span>
+            </a>
+        </li>
+        <li class="on">
+            <a href="javascript:;" class="link-tab">
+                <span class="txt-inner">TV 토론</span>
+            </a>
+        </li>
+    </ul>
+    <div class="content"></div>
+</div>
+</body>
+</html>
