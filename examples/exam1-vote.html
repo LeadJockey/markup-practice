@@ -18,32 +18,39 @@
         /* top */
         .top{
             position:relative;
-            padding:20px 0;
-            background-color:#002042;
+            height:124px;
+            background:url('./../public/images/election_mo_top_bg.png') 0 0 no-repeat;
+            background-size:cover;
             text-align:center;
         }
         .top-logo{
             display:inline-block;
-            padding:10px 20px;
-            font-weight:bold;
-            border:1px solid #efefef;
-            line-height:1.2;
+            width:119px;
+            padding-top:11px;
+            /*padding:10px 20px;*/
+            /*font-weight:bold;*/
+            /*border:1px solid #efefef;*/
+            /*line-height:1.2;*/
         }
-        .top-logo .txt-slogun{
-            display:block;
-            color:yellow;
-            font-size:18px;
+        .top-logo .img-logo{
+            width:100%;
+            vertical-align:top;
         }
-        .top-logo .txt-ordinal{
-            display:block;
-            color:#fff;
-            font-size:32px;
-        }
-        .top-logo .txt-tit{
-            display:block;
-            color:#fff;
-            font-size:20px;
-        }
+        /*.top-logo .txt-slogun{*/
+        /*display:block;*/
+        /*color:yellow;*/
+        /*font-size:18px;*/
+        /*}*/
+        /*.top-logo .txt-ordinal{*/
+        /*display:block;*/
+        /*color:#fff;*/
+        /*font-size:32px;*/
+        /*}*/
+        /*.top-logo .txt-tit{*/
+        /*display:block;*/
+        /*color:#fff;*/
+        /*font-size:20px;*/
+        /*}*/
         .top-info{
             position:absolute;
             right:14px;
@@ -84,37 +91,55 @@
             color:#444;
             font-weight:500;
         }
-        .list-tab .ico-vote{
+        .list-tab ico-vote{
+            display:none;
+        }
+        .list-tab .on .ico-vote{
             display:inline-block;
-            width:20px;
-            height:20px;
-            margin-right:5px;
-            background-color:orange;
-            font-size:10px;
-            color:#fff;
-            line-height:20px;
+            background:url('./../public/images/election_mo_ico_2.png') 0 0 no-repeat;
+            background-size:50px 50px;
             vertical-align:top;
-            border:1px solid #fff;
-            border-radius:50%;
+            /*display:inline-block;*/
+            /*width:20px;*/
+            /*height:20px;*/
+            /*margin-right:5px;*/
+            /*background-color:orange;*/
+            /*font-size:10px;*/
+            /*color:#fff;*/
+            /*line-height:20px;*/
+            /*vertical-align:top;*/
+            /*border:1px solid #fff;*/
+            /*border-radius:50%;*/
+        }
+        .list-tab .on .ico-vote.ico-tab{
+            width:14px;
+            height:14px;
+            margin:3px 4px 0 2px;
+            background-position:0 0;
+        }
+        .blue .list-tab .on .ico-vote.ico-tab{
+            width:14px;
+            height:14px;
+            margin:3px 4px 0 2px;
+            background-position:-15px 0;
         }
         .list-tab .on .link-tab{
             background-color:#fff;
         }
-
         /* sub tab */
         /*.list-sub{*/
-            /*padding:0 14px;*/
-            /*border-bottom:1px solid #efefef;*/
+        /*padding:0 14px;*/
+        /*border-bottom:1px solid #efefef;*/
         /*}*/
         /*.list-sub li{*/
-            /*width:50%;*/
+        /*width:50%;*/
         /*}*/
         /*.list-sub .link-tab{*/
-            /*background-color:#fff;*/
+        /*background-color:#fff;*/
         /*}*/
         /*.list-sub .on .link-tab{*/
-            /*margin-top:-1px;*/
-            /*border-bottom:2px solid #444;*/
+        /*margin-top:-1px;*/
+        /*border-bottom:2px solid #444;*/
         /*}*/
 
         /* sub tab with :before */
@@ -133,7 +158,6 @@
         }
         .list-sub li{
             width:50%;
-
         }
         .list-sub .link-tab{
             background-color:#fff;
@@ -147,12 +171,13 @@
     </style>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap blue">
     <div class="top">
         <div class="top-logo">
-            <span class="txt-slogun">변화의 선택</span>
-            <span class="txt-ordinal">제 19대</span>
-            <span class="txt-tit">대통령 선거</span>
+            <!--<span class="txt-slogun">변화의 선택</span>-->
+            <!--<span class="txt-ordinal">제 19대</span>-->
+            <!--<span class="txt-tit">대통령 선거</span>-->
+            <img src="./../public/images/election_mo_top_logo.png" class="img-logo" alt="변화의 선택 제 19대 대통령 선거">
         </div>
         <div class="top-info">
             <span class="txt-date">5.9.화요일</span>
@@ -162,17 +187,17 @@
     <ul class="list-tab">
         <li>
             <a href="javascript:;" class="link-tab">
-                <span class="txt-inner">개요</span>
+                <span class="txt-inner"><span class="ico-vote ico-tab"></span>개요</span>
             </a>
         </li>
         <li>
             <a href="javascript:;" class="link-tab">
-                <span class="txt-inner">후보자</span>
+                <span class="txt-inner"><span class="ico-vote ico-tab"></span>후보자</span>
             </a>
         </li>
         <li class="on">
             <a href="javascript:;" class="link-tab">
-                <span class="txt-inner"><span class="ico-vote">투표</span>핫이슈</span>
+                <span class="txt-inner"><span class="ico-vote ico-tab"></span>핫이슈</span>
             </a>
         </li>
     </ul>
@@ -188,7 +213,47 @@
             </a>
         </li>
     </ul>
-    <div class="content"></div>
+    <div class="content">
+        <ul class="list-debate">
+            <li><!-- state-ready state-end state-ing-->
+                <div>
+                    <strong>
+                        3차 대선후보 토론
+                        <span class="ico-cir">
+                        <span class="txt-inner">예정</span>
+                    </span>
+                    </strong>
+                    <dl>
+                        <dt>일시</dt>
+                        <dd>
+                            4.18.(화) 20:00~22:00
+                        </dd>
+                        <dt>중계</dt>
+                        <dd>
+                            <a href="javascript:;">KBS</a>,
+                            <a href="javascript:;">MBC</a>
+                        </dd>
+                        <dt>사회</dt>
+                        <dd>
+                            황상무 KBS 기
+                        </dd>
+                        <dt>참석</dt>
+                        <dd>
+                            <a href="javascript:;">문재</a>,
+                            <a href="javascript:;">이재명</a>,
+                            <a href="javascript:;">안철수</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div>
+                    <span>
+                        <span></span>
+                    </span>
+                    <span>진행중</span>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
