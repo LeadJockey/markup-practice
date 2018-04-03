@@ -1,0 +1,56 @@
+/* ico */
+.list-debate .ico-vote{display:inline-block;background:url('./../public/images/election_mo_ico_2.png') 0 0 no-repeat;background-size:50px 50px;vertical-align:top}
+
+/* top */
+.top{position:relative;height:124px;background:url('./../public/images/election_mo_top_bg.png') 0 0 no-repeat;background-size:cover;text-align:center}
+.top-logo{display:inline-block;width:119px;padding-top:11px}
+.top-logo .img-logo{width:100%;vertical-align:top}
+.top-info{position:absolute;right:14px;top:20px;text-align:right;line-height:1.2}
+.top-info .txt-date{display:block;color:#efefef;font-weight:bold}
+.top-info .txt-dday{display:block;color:yellow;font-size:20px;font-weight:bold}
+
+/* tab */
+.list-tab{overflow:hidden}
+.list-tab li{float:left;width:33.3333%;height:50px;color:#000}
+.link-tab{display:block;height:100%;background-color:#efefef;text-align:center}
+.list-tab .txt-inner{display:inline-block;padding-top:15px;color:#444;font-weight:500}
+.list-tab .ico-vote{display:none}
+.list-tab .on .ico-vote{display:inline-block;background:url('./../public/images/election_mo_ico_2.png') 0 0 no-repeat;background-size:50px 50px;vertical-align:top}
+.list-tab .on .ico-vote.ico-tab{width:14px;height:14px;margin:3px 4px 0 2px;background-position:0 0}
+.blue .list-tab .on .ico-vote.ico-tab{width:14px;height:14px;margin:3px 4px 0 2px;background-position:-15px 0}
+.list-tab .on .link-tab{background-color:#fff}
+.list-sub{position:relative;padding:0 14px}
+.list-sub:before{position:absolute;left:0;bottom:0;right:0;height:1px;background-color:#efefef;content:''}
+.list-sub li{width:50%}
+.list-sub .link-tab{background-color:#fff}
+.list-sub .on .link-tab{position:relative;height:49px;border-bottom:1px solid #444}
+
+/* content */
+.content{padding:0 14px;border-bottom:1px solid #C2C9D1}
+.list-debate{}
+.list-debate li{position:relative;padding:17px 70px 17px 0;border-top:1px solid #F0F1F3}
+.list-debate li:first-child{padding-top:18px;border:none}
+.list-debate .debate-tit{font-size:17px;font-weight:500;color:#000}
+.list-debate .debate-state{display:inline-block;width:40px;height:18px;margin-left:5px;border:1px solid #D9D9D9;border-radius:50px;text-align:center;vertical-align:top}
+.list-debate .debate-state .txt-inner{display:inline-block;margin-top:2px;font-size:11px;color:#000;vertical-align:top}
+.debate-info{background-color:lemonchiffon}
+.debate-tv{position:absolute;top:18px;right:0;width:56px;text-align:center}
+.debate-tv .frame-tv{display:block;height:54px;border:1px solid #EBEBEB;border-radius:50%}
+.debate-tv .ico-tv{width:23px;height:22px;margin:16px 2px 0 2px;background-position:0 -15px}
+.debate-tv .txt-inner{display:inline-block;margin-top:4px;font-size:14px;color:#000}
+
+/* dl-comp */
+.dl-comp{}
+.dl-comp:after{display:block;clear:both;content:""}
+.dl-comp dt{float:left;margin-right:8px;font-size:15px;color:#919191}
+.dl-comp dd{overflow:hidden}
+
+/* 진행중 */
+.state-ing .debate-state{border-color:red}
+.state-ing .debate-state .txt-inner{color:red}
+.state-ing .debate-tv .txt-inner{color:red}
+.state-ing .frame-tv{border-color:red}
+.state-ing .ico-tv{background-position:-25px -15px}
+.state-ing .txt-red{color:red}
+/* 종료 */
+

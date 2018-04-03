@@ -5,171 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>MobileLayout</title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="exam1-vote.css">
     <style>
         /* pc 레티나 대응 */
         @media only screen and (-webkit-min-device-pixel-ratio:1.5), not all, only screen and (min-resolution:1.5dppx), only screen and (min-resolution:144dpi){
 
         }
     </style>
-    <style>
-        /* 대선 페이지 테스트 */
-        /* common */
-        .screen_out{display:block;overflow:hidden;position:absolute;width:1px;height:1px;font-size:0;line-height:0;text-indent:-2500px}
-        /* top */
-        .top{
-            position:relative;
-            height:124px;
-            background:url('./../public/images/election_mo_top_bg.png') 0 0 no-repeat;
-            background-size:cover;
-            text-align:center;
-        }
-        .top-logo{
-            display:inline-block;
-            width:119px;
-            padding-top:11px;
-            /*padding:10px 20px;*/
-            /*font-weight:bold;*/
-            /*border:1px solid #efefef;*/
-            /*line-height:1.2;*/
-        }
-        .top-logo .img-logo{
-            width:100%;
-            vertical-align:top;
-        }
-        /*.top-logo .txt-slogun{*/
-        /*display:block;*/
-        /*color:yellow;*/
-        /*font-size:18px;*/
-        /*}*/
-        /*.top-logo .txt-ordinal{*/
-        /*display:block;*/
-        /*color:#fff;*/
-        /*font-size:32px;*/
-        /*}*/
-        /*.top-logo .txt-tit{*/
-        /*display:block;*/
-        /*color:#fff;*/
-        /*font-size:20px;*/
-        /*}*/
-        .top-info{
-            position:absolute;
-            right:14px;
-            top:20px;
-            text-align:right;
-            line-height:1.2;
-        }
-        .top-info .txt-date{
-            display:block;
-            color:#efefef;
-            font-weight:bold;
-        }
-        .top-info .txt-dday{
-            display:block;
-            color:yellow;
-            font-size:20px;
-            font-weight:bold;
-        }
-        /* tab */
-        .list-tab{
-            overflow:hidden;
-        }
-        .list-tab li{
-            float:left;
-            width:33.3333%;
-            height:50px;
-            color:#000;
-        }
-        .link-tab{
-            display:block;
-            height:100%;
-            background-color:#efefef;
-            text-align:center;
-        }
-        .list-tab .txt-inner{
-            display:inline-block;
-            padding-top:15px;
-            color:#444;
-            font-weight:500;
-        }
-        .list-tab ico-vote{
-            display:none;
-        }
-        .list-tab .on .ico-vote{
-            display:inline-block;
-            background:url('./../public/images/election_mo_ico_2.png') 0 0 no-repeat;
-            background-size:50px 50px;
-            vertical-align:top;
-            /*display:inline-block;*/
-            /*width:20px;*/
-            /*height:20px;*/
-            /*margin-right:5px;*/
-            /*background-color:orange;*/
-            /*font-size:10px;*/
-            /*color:#fff;*/
-            /*line-height:20px;*/
-            /*vertical-align:top;*/
-            /*border:1px solid #fff;*/
-            /*border-radius:50%;*/
-        }
-        .list-tab .on .ico-vote.ico-tab{
-            width:14px;
-            height:14px;
-            margin:3px 4px 0 2px;
-            background-position:0 0;
-        }
-        .blue .list-tab .on .ico-vote.ico-tab{
-            width:14px;
-            height:14px;
-            margin:3px 4px 0 2px;
-            background-position:-15px 0;
-        }
-        .list-tab .on .link-tab{
-            background-color:#fff;
-        }
-        /* sub tab */
-        /*.list-sub{*/
-        /*padding:0 14px;*/
-        /*border-bottom:1px solid #efefef;*/
-        /*}*/
-        /*.list-sub li{*/
-        /*width:50%;*/
-        /*}*/
-        /*.list-sub .link-tab{*/
-        /*background-color:#fff;*/
-        /*}*/
-        /*.list-sub .on .link-tab{*/
-        /*margin-top:-1px;*/
-        /*border-bottom:2px solid #444;*/
-        /*}*/
-
-        /* sub tab with :before */
-        .list-sub{
-            position:relative;
-            padding:0 14px;
-        }
-        .list-sub:before{
-            position:absolute;
-            left:0;
-            bottom:0;
-            right:0;
-            height:1px;
-            background-color:#efefef;
-            content:'';
-        }
-        .list-sub li{
-            width:50%;
-        }
-        .list-sub .link-tab{
-            background-color:#fff;
-        }
-        .list-sub .on .link-tab{
-            position:relative;
-            height:49px;
-            border-bottom:1px solid #444;
-        }
-
-    </style>
-</head>
 <body>
 <div class="wrap blue">
     <div class="top">
@@ -209,48 +51,116 @@
         </li>
         <li class="on">
             <a href="javascript:;" class="link-tab">
-                <span class="txt-inner">TV 토론</span>
+                <span class="txt-inner">TV 토론회</span>
             </a>
         </li>
     </ul>
     <div class="content">
         <ul class="list-debate">
             <li><!-- state-ready state-end state-ing-->
-                <div>
-                    <strong>
-                        3차 대선후보 토론
-                        <span class="ico-cir">
-                        <span class="txt-inner">예정</span>
-                    </span>
-                    </strong>
-                    <dl>
-                        <dt>일시</dt>
-                        <dd>
-                            4.18.(화) 20:00~22:00
-                        </dd>
-                        <dt>중계</dt>
-                        <dd>
-                            <a href="javascript:;">KBS</a>,
-                            <a href="javascript:;">MBC</a>
-                        </dd>
-                        <dt>사회</dt>
-                        <dd>
-                            황상무 KBS 기
-                        </dd>
-                        <dt>참석</dt>
-                        <dd>
-                            <a href="javascript:;">문재</a>,
-                            <a href="javascript:;">이재명</a>,
-                            <a href="javascript:;">안철수</a>
-                        </dd>
-                    </dl>
-                </div>
-                <div>
-                    <span>
-                        <span></span>
-                    </span>
-                    <span>진행중</span>
-                </div>
+                <strong class="debate-tit">3차 대선후보 토론회</strong>
+                <span class="debate-state"><span class="txt-inner">예정</span></span>
+                <dl class="dl-comp">
+                    <dt>일시</dt>
+                    <dd>
+                        4.18.(화) 20:00~22:00
+                    </dd>
+                </dl>
+                <dl class="dl-comp">
+                    <dt>중계</dt>
+                    <dd>
+                        <a href="javascript:;">KBS</a>,
+                        <a href="javascript:;">MBC</a>
+                    </dd>
+                </dl>
+                <dl class="dl-comp">
+                    <dt>사회</dt>
+                    <dd>
+                        황상무 KBS 기자
+                    </dd>
+                </dl>
+                <dl class="dl-comp">
+                    <dt>참석</dt>
+                    <dd>
+                        <a href="javascript:;">문재</a>,
+                        <a href="javascript:;">이재명</a>,
+                        <a href="javascript:;">안철수</a>
+                    </dd>
+                </dl>
+                <a href="javascript:;" class="debate-tv">
+                    <span class="frame-tv"><span class="ico-vote ico-tv"></span></span>
+                    <span class="txt-inner">다시보</span>
+                </a>
+            </li>
+            <li class="state-end"><!-- state-ready state-end state-ing-->
+                <strong class="debate-tit">3차 대선후보 토론회</strong>
+                <span class="debate-state"><span class="txt-inner">종료</span></span>
+                <dl class="dl-comp">
+                    <dt>일시</dt>
+                    <dd>
+                        4.18.(화) 20:00~22:00
+                    </dd>
+                </dl>
+                <dl class="dl-comp">
+                    <dt>중계</dt>
+                    <dd>
+                        <a href="javascript:;">KBS</a>,
+                        <a href="javascript:;">MBC</a>
+                    </dd>
+                </dl>
+                <dl class="dl-comp">
+                    <dt>사회</dt>
+                    <dd>
+                        황상무 KBS 기자
+                    </dd>
+                </dl>
+                <dl class="dl-comp">
+                    <dt>참석</dt>
+                    <dd>
+                        <a href="javascript:;">문재</a>,
+                        <a href="javascript:;">이재명</a>,
+                        <a href="javascript:;">안철수</a>
+                    </dd>
+                </dl>
+                <a href="javascript:;" class="debate-tv">
+                    <span class="frame-tv"><span class="ico-vote ico-tv"></span></span>
+                    <span class="txt-inner">다시보기</span>
+                </a>
+            </li>
+            <li class="state-ing"><!-- state-ready state-end state-ing-->
+                <strong class="debate-tit">3차 대선후보 토론회</strong>
+                <span class="debate-state"><span class="txt-inner">진행중</span></span>
+                <dl class="dl-comp">
+                    <dt>일시</dt>
+                    <dd class="txt-red">
+                        4.18.(화) 20:00~22:00
+                    </dd>
+                </dl>
+                <dl class="dl-comp">
+                    <dt>중계</dt>
+                    <dd>
+                        <a href="javascript:;">KBS</a>,
+                        <a href="javascript:;">MBC</a>
+                    </dd>
+                </dl>
+                <dl class="dl-comp">
+                    <dt>사회</dt>
+                    <dd>
+                        황상무 KBS 기자
+                    </dd>
+                </dl>
+                <dl class="dl-comp">
+                    <dt>참석</dt>
+                    <dd>
+                        <a href="javascript:;">문재</a>,
+                        <a href="javascript:;">이재명</a>,
+                        <a href="javascript:;">안철수</a>
+                    </dd>
+                </dl>
+                <a href="javascript:;" class="debate-tv">
+                    <span class="frame-tv"><span class="ico-vote ico-tv"></span></span>
+                    <span class="txt-inner">다시보기</span>
+                </a>
             </li>
         </ul>
     </div>
