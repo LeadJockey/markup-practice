@@ -1,21 +1,27 @@
 /* common */
 
 /* ico */
-.ico-share{}
-.ico-share.ico-home{}
-.ico-share.ico-facebook{}
-.ico-share.ico-twitter{}
-.ico-share.ico-kakao{}
+.ico-root{display:inline-block;background:url("./../../public/images/ico-election.png") 0 0 no-repeat;background-size:90px 60px;vertical-align:top}
+.ico-root.ico-home{width:30px;height:30px;background-position:0 0}
+.ico-root.ico-facebook{width:30px;height:30px;background-position:-30px 0}
+.ico-root.ico-twitter{width:30px;height:30px;background-position:-60px 0}
+.ico-root.ico-kakao{width:30px;height:30px;background-position:0 -30px}
+.ico-root.ico-arrow{width:15px;height:15px;margin-top:2px;background-position:-30px -30px}
 /* wrapper */
 .election-wrapper{}
 /* top */
-.election-top{}
+.election-top{position:relative;padding-bottom:16px;background:url("http://search1.daumcdn.net/search/statics/common/mi/eec/election_top1.jpg") 0 0 no-repeat;-webkit-background-size:cover;background-size:cover;text-align:center}
+.election-top .top-logo{display:inline-block;width:119px;padding-top:11px}
+.election-top .img-logo{width:100%;vertical-align:top}
+.election-top .top-info{position:absolute;right:14px;top:20px;text-align:right;line-height:1.2}
+.election-top .txt-date{display:block;color:#efefef;font-weight:bold}
+.election-top .txt-dday{display:block;color:yellow;font-size:20px;font-weight:bold}
 /* list-tab */
 /* list-candidate */
 /* detail-candidate */
 .detail-candidate{}
 .detail-candidate .main-detail{}
-.detail-candidate .img-candidate{width:100%;height:100%;vertical-align:top}
+.detail-candidate .img-candidate{width:100%;vertical-align:top}
 .detail-candidate .profile-candidate{position:relative;padding:10px 14px;background-color:#007AEF}
 .detail-candidate .txt-name{display:block;font-size:20px;color:#fff}
 .detail-candidate .txt-number{margin-right:8px;color:#fff}
@@ -24,14 +30,19 @@
 .detail-candidate .list-share{position:absolute;top:19px;right:14px}
 .detail-candidate .list-share li{float:left;margin-left:10px}
 .detail-candidate .list-share li:first-child{margin-left:0}
-.detail-candidate .link-share{display:block;width:30px;height:30px;background-color:#EFEFEF}
-
-
+.detail-candidate .link-share{display:block;width:30px;height:30px;/*background-color:#EFEFEF*/}
 .detail-candidate .info-detail{margin:0 14px;padding:14px 0;border-bottom:1px solid #F0F1F3;opacity:0.9}
 .detail-candidate .dl-comp{overflow:hidden;font-size:15px}
 .detail-candidate .dl-comp dt{float:left;padding-right:14px;color:#919191}
 .detail-candidate .dl-comp dd{overflow:hidden}
 .detail-candidate .txt-age{color:#919191}
 .detail-candidate .txt-cp{display:block;padding-top:14px;font-size:13px;color:#919191}
+@media only screen and (min-width:283px) and (max-width:319px){
+.detail-candidate .txt-party{display:block}
+.detail-candidate .txt-party:before{display:none}
+.detail-candidate .list-share{top:30px}
+}
+
 /* list-others */
 /* list-schedule*/
+
