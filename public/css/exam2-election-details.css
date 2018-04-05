@@ -1,12 +1,17 @@
 /* common */
 
 /* ico */
-.ico-root{display:inline-block;background:url("./../../public/images/ico-election.png") 0 0 no-repeat;background-size:90px 60px;vertical-align:top}
+.ico-root{display:inline-block;background:url("./../../public/images/ico-election.png") 0 0 no-repeat;background-size:140px 100px;vertical-align:top}
 .ico-root.ico-home{width:30px;height:30px;background-position:0 0}
-.ico-root.ico-facebook{width:30px;height:30px;background-position:-30px 0}
-.ico-root.ico-twitter{width:30px;height:30px;background-position:-60px 0}
-.ico-root.ico-kakao{width:30px;height:30px;background-position:0 -30px}
-.ico-root.ico-arrow{width:15px;height:15px;margin-top:2px;background-position:-30px -30px}
+.ico-root.ico-facebook{width:30px;height:30px;background-position:-35px 0}
+.ico-root.ico-twitter{width:30px;height:30px;background-position:-70px 0}
+.ico-root.ico-kakao{width:31px;height:31px;background-position:-105px 0}
+.ico-root.ico-arrow{width:15px;height:15px;margin-top:2px;background-position:-70px -70px}
+.ico-root.ico-commit{width:22px;height:18px;background-position:0 -35px}
+.ico-root.ico-research{}
+.ico-root.ico-news{}
+.ico-root.ico-timeline{}
+.ico-root.ico-candidate{}
 /* wrapper */
 .election-wrapper{}
 /* top */
@@ -17,21 +22,35 @@
 .election-top .txt-date{display:block;color:#efefef;font-weight:bold}
 .election-top .txt-dday{display:block;color:yellow;font-size:20px;font-weight:bold}
 /* list-tab */
+.list-tab{overflow:hidden}
+.list-tab li{float:left;width:33.3333%}
+.list-tab .link-tab{display:block;height:40px;padding:2px;background-color:#f5f5f5;font-size:15px;color:#000;text-align:center}
+.list-tab .txt-inner{display:inline-block;margin-top:14px;vertical-align:top}
 /* list-candidate */
+.cover-candidate{overflow-y:hidden;width:100%;padding-top:20px}
+.list-candidate{overflow-x:auto;width:573px}
+.list-candidate:after{display:block;clear:both;content:""}
+.list-candidate li{float:left;width:70px;margin-left:25px;padding-bottom:10px;border-bottom:1px solid #fff}
+.list-candidate li:first-child{margin-left:14px}
+.list-candidate .link-candidate{display:block;color:#000;text-align:center}
+.list-candidate .frame-img{overflow:hidden;border:1px solid #efefef;border-radius:50%}
+.list-candidate .img-candidate{width:100%;vertical-align:top}
+.list-candidate .txt-number{font-style:italic}
+.list-candidate .txt-name{display:inline-block;padding-top:6px}
 /* detail-candidate */
 .detail-candidate{}
 .detail-candidate .main-detail{}
-.detail-candidate .img-candidate{width:100%;vertical-align:top}
-.detail-candidate .profile-candidate{position:relative;padding:10px 14px;background-color:#007AEF}
+.detail-candidate .img-main{width:100%;vertical-align:top}
+.detail-candidate .profile-candidate{position:relative;padding:10px 14px;background-color:#007aef}
 .detail-candidate .txt-name{display:block;font-size:20px;color:#fff}
 .detail-candidate .txt-number{margin-right:8px;color:#fff}
-.detail-candidate .txt-party{color:#EBF2FF}
+.detail-candidate .txt-party{color:#ebf2ff}
 .detail-candidate .txt-party:before{display:inline-block;margin-right:8px;height:10px;width:1px;background-color:#fff;opacity:0.5;content:""}
 .detail-candidate .list-share{position:absolute;top:19px;right:14px}
 .detail-candidate .list-share li{float:left;margin-left:10px}
 .detail-candidate .list-share li:first-child{margin-left:0}
-.detail-candidate .link-share{display:block;width:30px;height:30px;/*background-color:#EFEFEF*/}
-.detail-candidate .info-detail{margin:0 14px;padding:14px 0;border-bottom:1px solid #F0F1F3;opacity:0.9}
+.detail-candidate .link-share{display:block;width:30px;height:30px; /*background-color:#EFEFEF*/}
+.detail-candidate .info-detail{margin:0 14px;padding:14px 0;border-bottom:1px solid #f0f1f3;opacity:0.9}
 .detail-candidate .dl-comp{overflow:hidden;font-size:15px}
 .detail-candidate .dl-comp dt{float:left;padding-right:14px;color:#919191}
 .detail-candidate .dl-comp dd{overflow:hidden}
@@ -42,7 +61,20 @@
 .detail-candidate .txt-party:before{display:none}
 .detail-candidate .list-share{top:30px}
 }
-
 /* list-others */
+.cover-others{padding:20px 0 13px}
+.cover-others .others-tit{display:inline-block;padding-left:14px;font-size:15px;font-weight:normal}
+.cover-others .list-others{display:-webkit-box;display:-moz-box;display:-ms-flexbox;overflow-y:hidden;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cover-others .list-others::-webkit-scrollbar{display:none}
+.cover-others .list-others li{width:60px;height:60px;background-color:#efefef;margin-left:14px}
+.cover-others .link-others{display:block}
+.cover-others .frame-ico{overflow:hidden;width:100%;border:1px solid #efefef;border-radius:50%}
 /* list-schedule*/
+
+/* on */
+.on .ico-root.ico-vote{width:14px;height:14px;margin:3px 5px 0 0;background-position:-35px -70px}
+.on .link-tab{color:#2b64d4;background-color:#fff}
+.list-candidate li.on{border-color:#2b64d4}
+.list-candidate li.on .link-candidate{color:#2b64d4}
+
 
