@@ -1,5 +1,7 @@
 /* common */
-
+.dl-comp{overflow:hidden;font-size:15px}
+.dl-comp dt{float:left;padding-right:14px;color:#919191}
+.dl-comp dd{overflow:hidden}
 /* ico */
 .ico-root{display:inline-block;background:url("./../../public/images/ico-election.png") 0 0 no-repeat;background-size:140px 100px;vertical-align:top}
 .ico-root.ico-home{width:30px;height:30px;background-position:0 0}
@@ -7,13 +9,8 @@
 .ico-root.ico-twitter{width:30px;height:30px;background-position:-70px 0}
 .ico-root.ico-kakao{width:31px;height:31px;background-position:-105px 0}
 .ico-root.ico-arrow{width:15px;height:15px;margin-top:2px;background-position:-70px -70px}
-.ico-root.ico-commit{width:22px;height:18px;background-position:0 -35px}
-.ico-root.ico-research{}
-.ico-root.ico-news{}
-.ico-root.ico-timeline{}
-.ico-root.ico-candidate{}
 /* wrapper */
-.election-wrapper{}
+.election-wrapper{margin-bottom:20px;border-bottom:1px solid #C2C9D1}
 /* top */
 .election-top{position:relative;padding-bottom:16px;background:url("http://search1.daumcdn.net/search/statics/common/mi/eec/election_top1.jpg") 0 0 no-repeat;-webkit-background-size:cover;background-size:cover;text-align:center}
 .election-top .top-logo{display:inline-block;width:119px;padding-top:11px}
@@ -51,9 +48,6 @@
 .detail-candidate .list-share li:first-child{margin-left:0}
 .detail-candidate .link-share{display:block;width:30px;height:30px; /*background-color:#EFEFEF*/}
 .detail-candidate .info-detail{margin:0 14px;padding:14px 0;border-bottom:1px solid #f0f1f3;opacity:0.9}
-.detail-candidate .dl-comp{overflow:hidden;font-size:15px}
-.detail-candidate .dl-comp dt{float:left;padding-right:14px;color:#919191}
-.detail-candidate .dl-comp dd{overflow:hidden}
 .detail-candidate .txt-age{color:#919191}
 .detail-candidate .txt-cp{display:block;padding-top:14px;font-size:13px;color:#919191}
 @media only screen and (min-width:283px) and (max-width:319px){
@@ -62,19 +56,35 @@
 .detail-candidate .list-share{top:30px}
 }
 /* list-others */
-.cover-others{padding:20px 0 13px}
-.cover-others .others-tit{display:inline-block;padding-left:14px;font-size:15px;font-weight:normal}
-.cover-others .list-others{display:-webkit-box;display:-moz-box;display:-ms-flexbox;overflow-y:hidden;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cover-others{padding-top:20px}
+.cover-others:after{display:block;margin:0 14px;height:1px;background-color:#F0F1F3;content:""}
+.cover-others .others-tit{display:inline-block;padding-left:14px;margin-bottom:12px;font-size:15px;font-weight:normal}
+.cover-others .list-others{display:-webkit-box;display:-moz-box;display:-ms-flexbox;overflow-y:hidden;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:13px}
 .cover-others .list-others::-webkit-scrollbar{display:none}
-.cover-others .list-others li{width:60px;height:60px;background-color:#efefef;margin-left:14px}
-.cover-others .link-others{display:block}
-.cover-others .frame-ico{overflow:hidden;width:100%;border:1px solid #efefef;border-radius:50%}
+.cover-others .list-others li{margin-right:14px}
+.cover-others .list-others li:first-child{margin-left:14px}
+.cover-others .link-others{display:block;color:#000;text-align:center}
+.cover-others .frame-others{overflow:hidden;width:60px;height:60px;border:1px solid #EBEBEB;border-radius:50%}
+.cover-others .img-others{width:100%}
+.cover-others .txt-inner{display:inline-block;margin-top:6px;vertical-align:top}
 /* list-schedule*/
+.cover-schedule{padding:20px 0}
+.cover-schedule .schedule-tit{display:inline-block;padding-left:14px;font-size:15px;font-weight:normal}
+.cover-schedule .list-schedule{overflow:hidden;padding:14px}
+.cover-schedule .list-schedule li{float:left;margin:0 1%;width:48%;box-sizing:border-box;border:1px solid #F5F5F5}
+.cover-schedule .img-schedule{width:100%;vertical-align:top;border-bottom:1px solid #F5F5F5}
+.cover-schedule .schedule-info{padding:8px}
+.cover-schedule .info-tit{display:inline-block;margin-bottom:2px}
+.cover-schedule .link-schedule{display:block;height:38px;padding:2px;font-size:15px;color:#000;border-top:1px solid #F5F5F5;text-align:center}
+.cover-schedule .txt-inner{display:inline-block;margin-top:10px;vertical-align:top}
+.cover-schedule .txt-inner.state-onair{color:#F73E47}
+.cover-schedule .txt-inner.state-onair:before{display:inline-block;margin-right:5px;content:">>"}
 
 /* on */
 .on .ico-root.ico-vote{width:14px;height:14px;margin:3px 5px 0 0;background-position:-35px -70px}
 .on .link-tab{color:#2b64d4;background-color:#fff}
 .list-candidate li.on{border-color:#2b64d4}
 .list-candidate li.on .link-candidate{color:#2b64d4}
-
+.cover-others .list-others li.on .link-others{color:#2B64D4}
+.cover-others .list-others li.on .frame-others{border-color:#2B64D4}
 
