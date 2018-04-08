@@ -78,7 +78,7 @@
 .cover-schedule .link-schedule{display:block;height:38px;padding:2px;font-size:15px;color:#000;border-top:1px solid #F5F5F5;text-align:center}
 .cover-schedule .txt-inner{display:inline-block;margin-top:10px;vertical-align:top}
 .cover-schedule .txt-inner.state-onair{color:#F73E47}
-.cover-schedule .txt-inner.state-onair:before{display:inline-block;margin-right:5px;content:">>"}
+.cover-schedule .txt-inner.state-onair:before{display:inline-block;margin-right:5px;content:"|>"}
 
 /* on */
 .on .ico-root.ico-vote{width:14px;height:14px;margin:3px 5px 0 0;background-position:-35px -70px}
