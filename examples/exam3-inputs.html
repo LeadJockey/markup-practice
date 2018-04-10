@@ -10,40 +10,73 @@
 <body>
 <div>
     <form action="">
-        <fieldset>
+        <fieldset style="background-color:#efefef">
             <legend></legend>
+            <div class="wrap-address">
+                <div class="box-city">
+                    <label for="city" class="screen_out">시 선택</label>
+                    <select name="" id="city" class="city-select">
+                        <option value="" selected>서울시</option>
+                        <option value="">부산시</option>
+                        <option value="">세종시</option>
+                    </select>
+                </div>
+                <div class="box-region">
+                    <label for="region" class="screen_out">구 선택</label>
+                    <select name="" id="region">
+                        <option value="" selected>용산구</option>
+                        <option value="">관악구</option>
+                        <option value="">중구</option>
+                    </select>
+                </div>
+            </div>
 
-            <div>
-                <label for=""></label>
-                <select name="" id="">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
+            <div class="wrap-info">
+                <div class="box-label">
+                    <label for="birth">생년월일 8자리<span class="txt-important">*</span></label>
+                </div>
+                <div class="box-input">
+                    <input type="text" id="birth" maxlength="8" placeholder="예)19870815">
+                </div>
             </div>
-            <div>
-                <ul>
-                    <li>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <input type="checkbox">
-                        <input type="checkbox">
-                        <input type="checkbox">
-                        <input type="checkbox">
-                    </li>
-                    <li>
-                        <input type="radio">
-                        <input type="radio">
-                    </li>
-                    <li>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <input type="text">
-                    </li>
-                </ul>
+            <div class="wrap-info">
+                <div class="box-label">
+                    <label for="nsn1">주민번호 3자리<span class="txt-extra">(필수항목아님)</span></label>
+                </div>
+                <div class="box-nsn">
+                    <span class="txt-nsn">XXXXXX-XXXX</span>
+                    <ul class="list-nsn">
+                        <li>
+                            <input type="text" id="nsn1" title="주민번호 뒤에서 3번째 자리" placeholder="*">
+                        </li>
+                        <li>
+                            <input type="text" id="nsn2" title="주민번호 뒤에서 2번째 자리" placeholder="*">
+                        </li>
+                        <li>
+                            <input type="text" id="nsn3" title="주민번호 뒤에서 1번째 자리" placeholder="*">
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <div class="wrap-info">
+                <div class="box-label">
+                    <div class="info-gender">
+                        <div class="btn-gender">
+                            <input type="radio" class="gender-input" name="gender" id="male" checked>
+                            <label for="male" class="gender-label">남</label>
+                        </div>
+                        <div class="btn-gender">
+                            <input type="radio" class="gender-input" name="gender" id="female">
+                            <label for="female" class="gender-label">여</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-input">
+                    <label for="name" class="screen_out">이름</label>
+                    <input type="text" id="name"  placeholder="이름을 입력해주세요.">
+                </div>
+            </div>
+
         </fieldset>
     </form>
 </div>

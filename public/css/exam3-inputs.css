@@ -1,0 +1,29 @@
+.wrap-address{overflow:hidden;padding:14px}
+.wrap-address .box-city{float:left;width:49%;margin-right:2%}
+.wrap-address select{width:100%;height:30px;background-color:#fff;border:1px solid #fff;border-radius:50px;box-sizing:border-box}
+.wrap-address select option{text-align:center}
+.wrap-address .box-region{float:left;width:49%}
+
+.wrap-info{overflow:hidden;padding:0 14px;margin-bottom:5px}
+.wrap-info .box-label{float:left;width:100px;padding-top:2px}
+.wrap-info .box-label .txt-important{display:inline-block;padding:2px 4px 0 4px;color:red;vertical-align:top}
+.wrap-info .box-label .txt-extra{display:block;padding-left:6px;font-size:12px;color:gray;line-height:1;}
+.wrap-info .box-input{overflow:hidden}
+.wrap-info .box-input input{width:100%;height:40px;border:1px solid gray;text-indent:14px;box-sizing:border-box}
+.wrap-info .box-nsn{overflow:hidden}
+.wrap-info .txt-nsn{float:left;margin-right:10px;padding-top:10px}
+.wrap-info .list-nsn{overflow:hidden;width:90px}
+.wrap-info .list-nsn li{float:left;width:33.3333%;margin-left:-1px}
+.wrap-info .list-nsn li:first-child{margin-left:0}
+.wrap-info .list-nsn li input{display:inline-block;height:40px;width:100%;border:1px solid gray;text-align:center;}
+
+.wrap-info .info-gender{width:70px;height:34px;background-color:#fff;border:1px solid gray;border-radius:50px;box-sizing:border-box}
+.wrap-info .btn-gender{position:relative;float:left;width:50%;top:-1px;right:-1px}
+.wrap-info .btn-gender:first-child{right:0;left:-1px;}
+.wrap-info .gender-label{display:block;height:34px;border-radius:50%;font-size:18px;text-align:center;padding-top:5px;box-sizing:border-box}
+.wrap-info .gender-input{position:absolute;top:0;left:-99px;width:0;height:0}
+.wrap-info .gender-input:checked + .gender-label{background-color:#002042;color:yellow}
+
+
+
+
