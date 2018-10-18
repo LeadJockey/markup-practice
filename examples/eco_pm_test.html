@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/eco_pm_test.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="//www.jsviews.com/download/jsrender.js"></script>
+</head>
+<body>
+<div class="wrap_pst">
+    <div class="pst_head">
+        <div class="tmp_area">HEAD</div>
+    </div>
+    <hr class="hide">
+
+    <div class="pst_cont">
+        <div class="cont_aside">
+            <div class="tmp_aside">ASIDE</div>
+        </div>
+        <div class="cont_main">
+            <div class="area_worksheet">
+                <div class="control_worksheet">
+                    <select class="opts_ctrl _sortBy">
+                        <option value="date" selected>날짜정렬</option>
+                        <option value="stateOrder">상태정렬</option>
+                    </select>
+                    <select class="opts_ctrl _searchBy">
+                        <option value="service" selected>서비스</option>
+                        <option value="title">주제</option>
+                        <option value="date">날짜</option>
+                        <option value="state">상태</option>
+                    </select>
+                    <input type="text" class="opts_ctrl _query" placeholder="검색...">
+                </div>
+                <div class="scroll_worksheet">
+                    <!-- worksheet rending area -->
+                </div>
+            </div>
+            <div class="area_timeline">
+                <div class="tmp_timeline">TIMELINE</div>
+            </div>
+        </div>
+    </div>
+    <hr class="hide">
+
+    <div class="pst_foot">
+        <div class="tmp_area">FOOT</div>
+        <small>&copy; shawn's</small>
+    </div>
+</div>
+<script id="tmplItemWork" type="text/x-jsrender">
+    <div class="item_work">
+        <a href="javascript:;" class="link_item">
+            <span class="txt_date">{{:date}}</span>
+            <span class="txt_state {{:stateClass}}">{{:state}}</span>
+            <span class="txt_service">{{:service}}</span>
+            <span class="txt_title">{{:title}}</span>
+            <span class="txt_worker">{{:author}}</span>
+            <span class="num_link">LINK {{:linkCount}}</span>
+            <span class="num_docs">DOCS {{:docsCount}}</span>
+            <span class="num_issue">ISSUE {{:issueCount}}</span>
+        </a>
+        <div class="box_detail hide">
+            <p class="group_info">
+                <span class="txt_date">{{:period}}</span>&nbsp;
+                <span class="txt_hash">{{:hashId}}</span>
+            </p>
+            <div class="group_detail">
+                <div class="item_detail">
+                    <strong class="tit_list">담당자</strong>
+                    <ul class="list_worker">
+                        {{for workerList}}
+                            <li>{{:position}} {{:name}}</li>
+                        {{/for}}
+                    </ul>
+                </div>
+                <div class="item_detail">
+                    <strong class="tit_list">링크</strong>
+                    <ul class="list_link">
+                        <li><a href="javascript:;">agit</a></li>
+                        <li><a href="javascript:;">github</a></li>
+                        <li><a href="javascript:;">gitle</a></li>
+                    </ul>
+                </div>
+                <div class="item_detail">
+                    <strong class="tit_list">문서</strong>
+                    <ul class="list_docs">
+                        <li><a href="javascript:;">wiki</a></li>
+                        <li><a href="javascript:;">doc link 1</a></li>
+                    </ul>
+                </div>
+                <div class="item_detail">
+                    <strong class="tit_list">이슈</strong>
+                    <ul class="list_issue">
+                        <li>내부 디자인 병경 1차</li>
+                        <li>iphone X 에서 영역 병합 현상</li>
+                        <li>이미지 변경 3개요소 </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script>
+  (function(exports, doc, $){
+
+    var $ctx = $('.wrap_pst');
+    var $cont = $ctx.find('.pst_cont');
+    var $sortBy = $cont.find('._sortBy');
+    var $searchBy = $cont.find('._searchBy');
+    var $query = $cont.find('._query');
+    var $worksheet = $cont.find('.scroll_worksheet');
+    var originalDataList = createDataList(12);
+    var currentDataList =
+
+    render();
+    bindEvents();
+
+    function bindEvents(){
+      $worksheet.on('click', '.link_item', function(){
+        $(this).siblings('.box_detail').toggleClass('hide');
+      });
+      $query.on('keyup', function(){
+        var key = $searchBy.val();
+        var value = $(this).val();
+        var searchedList = originalDataList.filter(function(item){
+          return item[key].indexOf(value.toUpperCase()) > -1;
+        });
+        render(sortByKey(searchedList, $sortBy.val()));
+      });
+    }
+
+    function render(dataList){
+      var renderList = dataList || sortByKey(originalDataList, 'date');
+      $worksheet.html(
+        $.templates(doc.getElementById('tmplItemWork').innerHTML)
+         .render(renderList)
+      );
+      currentDataList = renderList;
+    }
+
+    function getRandomData(){
+      var STATE_ORDER = [1, 2, 3, 4, 5];
+      var STATE_TYPES = ['TODO', 'READY', 'DOING', 'EXTRA','DONE'];
+      var STATE_CLASSES = ['state_todo', 'state_ready', 'state_doing', 'state_extra', 'state_done'];
+      var SERVICES = ['카카오페이지', '다음웹툰', '카카오뱅크', '카카오페이', '모빌리티', '카카오헤어',  '카카오M', '카카오VX', '외부사업'];
+      var randomIndex = Math.floor(Math.random() * STATE_TYPES.length);
+      var randomMonth = Math.floor((Math.random()* 12) +1);
+      var randomDate = Math.floor((Math.random()* 30) +1);
+      var randomLinkCount = Math.floor(Math.random() * 20);
+      var randomDocsCount = Math.floor(Math.random() * 20);
+      var randomIssueCount = Math.floor(Math.random() * 20);
+      return {
+        date:randomMonth + '.' + randomDate,
+        service:SERVICES[Math.floor(Math.random() * SERVICES.length)],
+        title:'내일부터 시작한다고 한 기업사이트인데 아직.. ',
+        author:'@shawn.thecool',
+        state:STATE_TYPES[randomIndex],
+        stateClass:STATE_CLASSES[randomIndex],
+        stateOrder:STATE_ORDER[randomIndex],
+        linkCount:randomLinkCount,
+        docsCount:randomDocsCount,
+        issueCount:randomIssueCount,
+        period:'2018.10.18 ~ 2019.01.21',
+        hashId:'73903b98e5c22bdcff4af457d52065dde87b42d7',
+        workerList:[
+          {
+            position:'기획',
+            name:'@기획자.test'
+          },
+          {
+            position:'디자인',
+            name:'@디자인.test'
+          },
+          {
+            position:'프론트',
+            name:'@프론트.test'
+          },
+          {
+            position:'백',
+            name:'@백.test'
+          }
+        ]
+      };
+    }
+    function createDataList(max){
+      var dataList = [];
+      for(var i =0; i < max; i++){
+        dataList.push(getRandomData());
+      }
+      return dataList;
+    }
+    function sortByKey(targetList, key){
+      return targetList.slice().sort(function(a, b){return a[key] - b[key]})
+    }
+
+  })(window, document, jQuery);
+</script>
+</body>
+</html>

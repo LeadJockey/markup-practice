@@ -3,8 +3,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 fieldset, img{border:0 none}
 dl, ul, ol, menu, li{list-style:none}
 blockquote, q{quotes:none}
-blockquote:before, blockquote:after{content:'';content:none}
-q:before, q:after{content:'';content:none}
+blockquote:before, blockquote:after{content:"";content:none}
+q:before, q:after{content:"";content:none}
 input, select, textarea, button{vertical-align:middle;font-size:100%}
 table{border-collapse:collapse;border-spacing:0}
 body{-webkit-text-size-adjust:none}
@@ -14,19 +14,13 @@ input:checked[type='checkbox']{background-color:#666;-webkit-appearance:checkbox
 button{border:0 none;border-radius:0;background:transparent;cursor:pointer;-webkit-appearance:button}
 button::-moz-focus-inner{border:0;padding:0}
 hr{display:none}
-html, body{background:#fff}
-a{color:#007aff;text-decoration:none}
+html, body{background:#313335}
+a{color:#6798bd;text-decoration:none}
 address, caption, cite, code, dfn, em, var{font-style:normal;font-weight:normal}
-body, th, td, input, select, textarea, button{font-size:14px;line-height:1.5;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;color:#000}
+body, th, td, input, select, textarea, button{font-size:15px;line-height:1.5;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;color:#9fbabb}
 main{display:block}
-.iphone{font-family:helvetica, AppleSDGothicNeo, sans-serif}
-.iphone b{font-family:AppleSDGothicNeo-Bold;font-weight:normal}
-.iphone th, .iphone td, .iphone input, .iphone select, .iphone textarea, .iphone button{font-family:helvetica, AppleSDGothicNeo, sans-serif}
-.android b{font-weight:bold}
-.firefox button, input{background-image:none}
-img[data-original-src]{background-color:#fff}
-.ir_pm{display:block;overflow:hidden;font-size:0;line-height:0;text-indent:-9999px}
-.ir_wa{display:block;overflow:hidden;position:relative;width:100%;height:100%;z-index:-1}
 .screen_out{display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px}
 .screen_hide{height:0;font-size:0;line-height:0;visibility:hidden}
+.hide{display:none}
+.show{display:block}
 /* reset end */
